@@ -127,6 +127,10 @@ const renderNoteList = async (notes) => {
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item');
+    // var colorCheck = Math.floor(Math.random() * 2 )
+    // if (colorCheck === 1){
+    //   liEl.style.backgroundColor = '#676767';
+    // } 
 
     const spanEl = document.createElement('span');
     spanEl.innerText = text;
@@ -140,7 +144,6 @@ const renderNoteList = async (notes) => {
         'fas',
         'fa-trash-alt',
         'float-right',
-        'text-danger',
         'delete-note'
       );
       delBtnEl.addEventListener('click', handleNoteDelete);

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark nav-color">
     <a class="navbar-brand" href="/">Note Taker
     </a>
     <div class="icons">
@@ -21,17 +21,17 @@
       <i class="fas fa-pen text-light new-note"></i>
     </div>
   </nav>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-4 list-container" id="list-container">
-        <div class="card">
-          <ul class="list-group" id="list-group">
+  <div class="container-fluid " >
+    <div class="row justify-content-around">
+      <div class="col-6 container-color">
+        <input class="note-title container-color" placeholder="Note Title" maxlength="28" type="text" >
+        <textarea class="note-textarea container-color" placeholder="Note Text" ></textarea>
+      </div>
+      <div class="col-3 list-container" id="list-container">
+        <div class="card color3">
+          <ul class="list-group " style="color:white" id="list-group">
           </ul>
         </div>
-      </div>
-      <div class="col-8">
-        <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
-        <textarea class="note-textarea" placeholder="Note Text"></textarea>
       </div>
     </div>
   </div>

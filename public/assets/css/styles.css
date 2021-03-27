@@ -1,3 +1,5 @@
+
+
 html, body {
   height: 100%;
   margin: 0;
@@ -16,7 +18,7 @@ html, body {
 }
 
 .note-textarea, .note-title {
-  color: #000000;
+  color: white;
   width: 100%;
   outline: none;
   border: none;
@@ -35,7 +37,7 @@ html, body {
 }
 
 .note-title:read-only, .note-textarea:read-only {
-  color: #757575;
+  color: white;
 }
 
 .list-container .card {
@@ -68,3 +70,27 @@ html, body {
   padding: 20px;
   cursor: pointer;
 }
+
+.nav-color {
+  background-color: #1b204d;
+}
+
+body {
+  background-color: #272e74;
+}
+
+.container-color {
+  background-color: #0e1027;
+}
+
+.color3 {
+  background-color: #272e74;
+  border-style: none;
+}
+
+.color5 {
+  background-color: #818181;
+}
+
+li:nth-child(even){ background-color: #0e1027; }
+li:nth-child(odd) { background: #818181; }
