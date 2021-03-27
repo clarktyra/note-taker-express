@@ -73,6 +73,7 @@ html, body {
 
 .nav-color {
   background-color: #1b204d;
+  justify-content: left;
 }
 
 body {
