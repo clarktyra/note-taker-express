@@ -1,4 +1,4 @@
-# 11  Note Taker with Express.js
+# Note Taker with Express.js
 
 ## Description
 
@@ -45,6 +45,7 @@ The following API routes be created:
 
 * `POST /api/notes` receives a new note to save on the request body, add it to the `db.json` file, and then returns the new note to the client. 
 
+* `DELETE /api/notes/:id` receives a query parameter containing the id of a note to delete. 
 
 
 

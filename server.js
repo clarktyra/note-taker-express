@@ -59,6 +59,26 @@ app.post('/api/notes', (req, res) => {
     }
 )
 
+app.delete('/api/notes/:id', (req, res) => {
+    fs.readFile("./db/db.json", "utf8", function (err, data) {
+        console.log("data: ", data)
+        let parsedNotes;
+
+        parsedNotes = JSON.parse(data)
+        console.log("parsedNotes: ", parsedNotes)
+
+        parsedNotes = parsedNotes.filter(obj => obj.id != req.params.id)
+        console.log("parsedNotesAdded: ", parsedNotes)
+
+        parsedNotes = JSON.stringify(parsedNotes);
+        console.log("stringifiedParsedNotesAdded: ", parsedNotes)
+        
+        // return parsedNotes
+        writeFileAsync('db/db.json', parsedNotes);
+    })
+    res.redirect("/")
+})
+
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
