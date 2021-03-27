@@ -54,6 +54,7 @@ app.post('/api/notes', (req, res) => {
             // return parsedNotes
             writeFileAsync('db/db.json', parsedNotes);
         })
+        res.redirect("/")
         
     }
 )
