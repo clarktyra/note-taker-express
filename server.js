@@ -19,7 +19,7 @@ app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/note
 
 app.get('/api/notes', (req, res) => {
     fs.readFile("./db/db.json", "utf8", function (err, data) {
-        res.json(JSON.parse(data))
+        res.json(JSON.parse(data).reverse())
     })
 }
 //res.json(data)
